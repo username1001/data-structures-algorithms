@@ -47,6 +47,7 @@ print(samenums);
 
 // Note: when assigning one array to another, you are assigning a reference to the assigned array.
 // When you make a change to the original array, that change is reflected in the other array as well.
+// AKA a "shallow copy"
 const numero = [];
 for (let i = 0; i < 100; i++) {
   numero[i] = i + 1;
@@ -55,3 +56,19 @@ for (let i = 0; i < 100; i++) {
 const sameNumero = numero;
 numero[0] = 400;
 print(sameNumero[0]); // 400
+
+// a "deep copy", using a function:
+const copy = (arr1, arr2) => {
+  for (let i = 0; i < arr1.length; i++) {
+    arr2[i] = arr1[i];
+  }
+};
+
+const n = [];
+for (let i = 0; i < 100; i++) {
+  n[i] = i + 1;
+}
+const sameN = [];
+copy(n, sameN);
+n[0] = 400;
+print(sameN[0]); // 1

@@ -44,3 +44,14 @@ for (let i = 0; i < 10; i++) {
 }
 const samenums = newNums;
 print(samenums);
+
+// Note: when assigning one array to another, you are assigning a reference to the assigned array.
+// When you make a change to the original array, that change is reflected in the other array as well.
+const numero = [];
+for (let i = 0; i < 100; i++) {
+  numero[i] = i + 1;
+}
+
+const sameNumero = numero;
+numero[0] = 400;
+print(sameNumero[0]); // 400

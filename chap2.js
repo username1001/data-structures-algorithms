@@ -72,3 +72,34 @@ const sameN = [];
 copy(n, sameN);
 n[0] = 400;
 print(sameN[0]); // 1
+
+/* Accessor Functions */
+
+// Searching for a Value with indexOf()
+// const names = ['David', 'Cynthia', 'Raymond', 'Clayton', 'Jennifer'];
+// // putstr() not defined in book.
+// putstr('Enter a name to search for: ');
+// // readline() not defined in book.
+// const name = readline();
+// const position = names.indexOf(name);
+// if (position >= 0) {
+//   print(`Found ${name} at position ${position}`);
+// } else {
+//   print(`${name} not found in array.`);
+// }
+
+// Different version:
+const newNames = [
+  'Kaitlyn',
+  'Cassandra',
+  'Mike',
+  'Adam',
+  'John',
+  'Sarah',
+  'Mike'
+];
+const name = 'Mike';
+const firstPos = newNames.indexOf(name);
+print(`First found ${name} at position ${firstPos}`);
+const lastPos = newNames.lastIndexOf(name);
+print(`Last found ${name} at position ${lastPos}`);
